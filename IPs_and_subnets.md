@@ -6,7 +6,7 @@
 
 [External IP addresses](#external-ip-addresses)
 
-[What is a subnet mask?](#what-is-a-subnet-mask)
+[What is a subnet?](#what-is-a-subnet)
 
 [Putting is all together](#putting-it-all-together)
 
@@ -71,11 +71,11 @@ Non-physical servers that share the same physical server such as web and FTP ser
 
 Server and other supported hosts can be assigned multiple external IP addresses. For example, a company may have a security policy that allows them to host their web server and email server on the same physical server but they may be required to keep the web server and mail server on separate IPs adresses.
 
-## What is a subnet mask?
+## What is a subnet?
 
-When a device is assigned and IP address, it is also assigned a subnet mask. A subnets mask identifies the range of allowable IP addresses on a network segment, and is applicable to both internal or external IP addresses.
+When a device is assigned and IP address, it is also assigned a subnet mask. A subnet mask identifies the range of allowable IP addresses on a network segment. A netowrk segment is also referred to as a subnet.
 
-As with an IP address, a subnet mask that is assigned to a device can typically be found in the network settings, or from the command line in your computer operating system.
+As with an IP address, a subnet mask that is assigned to a device can be found in the network settings, or from the command line in your computer operating system.
 
 From the MacOS and Linux Terminal app, use the command:
 
