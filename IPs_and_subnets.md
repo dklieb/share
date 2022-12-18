@@ -48,7 +48,7 @@ There are three ranges of IP addresses that are used for assigning internal addr
 - 172.0.0.0 - 172.255.255.255
 - 192.168.0.0 - 192.168.255.255
 
-Supported devices such as personal computers can have multiple internal IP addresses for communicating across different or subnets on a network.
+Supported devices such as personal computers can have multiple internal IP addresses for communicating across different subnets on a network.
 
 ## External IP addresses
 
@@ -56,7 +56,7 @@ External IP addresses are assigned to devices connected directly to the internet
 
 Some devices including routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
 
-Non-physical servers that share the same physical server such as web and FTP servers can share the same IP address. Each physical server must use a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
+Non-physical servers that share the same physical server such as web and FTP servers can use the same IP address. Each physical server must use a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
 
 Server and other supported hosts can be assigned multiple external IP addresses. For example, a company may have a security policy that allows them to host their web server and email server on the same physical server but they may be required to keep the web server and mail server on separate IPs adresses.
 
