@@ -1,72 +1,105 @@
+# Understanding IP addresses and subnets
+
+
 ## What is an IP address?
 
-An IP address is a unique identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, and printers. The two common protocols used for assigning IP addresses are IPv4 and IPv6.
+An IP address is a unique numerical identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, IoT devices, and printers.
 
-A device’s IP address can typically be found in its network settings, or from the command line in your operating system.
+A device’s IP address can typically be found in the network settings, or from the command line in your computer's operating system.
 
-In MacOS and Linux Terminal app, use the command:
+From the MacOS and Linux Terminal app, use the command:
 
 ```/sbin/ifconfig```
 
-In the Windows Command Prompt shell, use the command:
+From the Windows Command Prompt shell, use the command:
 
 ```ipconfig```
 
-An IP address is a sequence of integers divided into four sections, separated by decimals. This represents 32 bits in total with four sections containing 8 bits or octet segments. The integer representation of an IP address is easier to read, however when communicating over networks and the internet, addresses are sent in binary using 1’s and 0’s. For example, consider the IP address 192.168.0.1.
+The output will display various networking properties for the computer, including the assigned IP address. For example:
 
-| Format | Octet |Octet |Octet |Octet |
-| ----------- | ----------- | ----------- | ----------- | ----------- | 
-| Integer version | 192 | 168 | 0 | 1 | 
-| Binary version | 11000000 |10101000 |00000000 |00000001 |
+```192.168.0.1```
 
-An IP address also contains information about the network ID and the host ID. The network ID is the subnet that the host belongs to, and the host ID is the host itself. For more information about subnets, see the section What is a subnet? below.
+An IP address contains four sets of integers, each separated by a decimal. This sequence of numbers represents a 32 bit number in total, with each of the four sections containing 8 bits or octets. The integer representation of an IP address is easier to read, however when communicating over networks and the internet, addresses are communicated in binary using 1’s and 0’s. 
 
-The following table shows how to identify the host ID and network ID:
-| Network ID | Network ID | Network ID |Host ID |
-| ----------- | ----------- | ----------- | ----------- |
-| 192 | 168 | 0 | 1 | 
+Consider the 192.168.0.1 address that can be represented as both integers and binary:
+
+| Format          | Octet 1  | Octet 2  | Octet 3  | Octet 4  |
+| --------------- | -------- | -------- | -------- | -------- |
+| Integer version | 192      | 168      | 0        | 1        |
+| Binary version  | 11000000 | 10101000 | 00000000 | 00000001 |
+
+In addition to the IP address being a unique identifier for the device, it also contains information about the network ID and the host ID. A network ID is the subnet that the device belongs to, and the host ID is an identifier for the device itself. 
+
+The following table shows how identify the host ID and network ID:
+| Network ID | Network ID | Network ID | Host ID |
+| ---------- | ---------- | ---------- | ------- |
+| 192        | 168        | 0          | 1       |
+
+The networking ID and hosting ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section on subnets.
 
 ## Internal and external IP addresses
 
-An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses on a LAN are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network.
+**Internal addresses**
 
-There are three ranges of IP addresses that are typically used for assigning internal addresses:
+An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network, but they can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their device, and eliminates the possibility of two devices from using the same address. Any of these scenarios will prevent devices from connecting to the network.
+
+There are three ranges of IP addresses that are used for assigning internal addresses:
 
 - 10.0.0.0 - 10.255.255.255
 - 172.0.0.0 - 172.255.255.255
 - 192.168.0.0 - 192.168.255.255
 
-External IPs are assigned to devices connected directly to the internet. Typically, corporate servers are assigned a static IP address and always remain the same. Home internet connections are usually assigned dynamic external IP addresses that can change. 
+**External addresses**
 
-Devices such as routers are configured with both internal and external IP addresses. This allows communication on both the internal LAN and over the internet simultaneously, and act as a gateway for LAN devices to access the internet.
+External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned am external static IP address so that they remain the same to allow others to always find the server. Examples of these include websites, FTP servers, application servers, mail servers, and database servers. 
 
-## What is a subnet?
+Some devices including routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
 
-A subnet is used for defining the range of allowable IP addresses on a network segment, and is used for both internal and external IP addresses. As with IP addresses, subnets contain four set integers, separated by decimals. 
+Non-physical servers such as web and FTP servers can have the same IP address, however each physical server must a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
 
-For example, consider the subnet 255.255.255.0 represented in both integers and binary.
+## What is a subnet mask?
 
-| Format | Octet |Octet |Octet |Octet |
-| ----------- | ----------- | ----------- | ----------- | ----------- | 
-| Integer version | 255 | 255 | 255 | 0 | 
-| Binary version | 11111111 |11111111 |11111111 |00000000 |
+When a device is assigned and IP address, it is also assigned a subnet mask. A subnets mask identifies the range of allowable IP addresses on a network segment, and is assigned to devices using internal or external IP addresses.
 
-There are three main subnet class types. These classes allow a network administrator to define the size of a network segment by configuring a subnet mask and prefix.
+As with an IP address, a subnet mask that is assigned to a device can typically be found in the network settings, or from the command line in your computer operating system.
 
-| Class | First octet range |Subnet Mask |Subnet prefix |Number of hosts |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| A | 1-126 | 255.0.0.0 | /8 | 16,777,214 |
-| B | 128-191 | 255.255.0.0 | /16 | 65,534|
-| C | 192-223 | 255.255.255.0 | /24 | 256|
+From the MacOS and Linux Terminal app, use the command:
 
-Using the above examples, we can now determine the following:
+```/sbin/ifconfig```
+
+From the Windows Command Prompt shell, use the command:
+
+```ipconfig```
+
+The output will display various networking properties for the computer, including the assigned subnet mask. For example:
+
+```255.255.255.0```
+
+As with IP address, a subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
+
+
+| Format          | Octet    | Octet    | Octet    | Octet    |
+| --------------- | -------- | -------- | -------- | -------- |
+| Integer version | 255      | 255      | 255      | 0        |
+| Binary version  | 11111111 | 11111111 | 11111111 | 00000000 |
+
+There are three main subnet class types. These classes allow a network administrator to define the size of a network segment by configuring a subnet mask and prefix. A prefix is s short form representation of the subnet mask.
+
+| Class | First octet range | Subnet Mask   | Subnet prefix | Number of hosts |
+| ----- | ----------------- | ------------- | ------------- | --------------- |
+| A     | 1-126             | 255.0.0.0     | /8            | 16,777,214      |
+| B     | 128-191           | 255.255.0.0   | /16           | 65,534          |
+| C     | 192-223           | 255.255.255.0 | /24           | 256             |
+
+Using all of the the information based on the IP address and subnet examples above, we can now determine the following:
 
 - The IP for the device is 192.168.0.1
 - The subnet mask for the device is 255.255.255.0
-- The combination of IP and subnet mask can be represented as 192.168.0.1 /24
-- The subnet can have up to 254 devices because it is a class C type subnet
+- The combination of IP and subnet mask can be represented with the subnet prefix as 192.168.0.1 /24
+- The subnet can assign up to 245 IP addresses because it is a class C type subnet
 
-## Additional considerations 
-- Class D and class E subnets exist but they are not used for IP addresses and subnetting because they are often reserved for multicasting and experimentation on the network.
-- The 127.0.0.0-127.255.255.255 cannot be used for assigning IP addresses on a network because the range is reserved for local host traffic only.
-- The 0 or 255 numbers in the last octet cannot be assigned to devices because they are reserved for broadcasting, and experimentation.
+## Additional information
+- The Class D and class E subnets exist but they are not used for IP addresses and subnetting because they are often reserved for multicasting and experimentation on the network.
+- The 127.0.0.0-127.255.255.255 range cannot be used for assigning IP addresses on a network because the range is reserved for local host traffic only.
+- The 0 or 255 numbers in the last octet of an IP address range cannot be assigned to devices because they are reserved for broadcasting, and experimentation.
+- Multiple internal or external IP addresses can be assigned to a device, if that device supports such an implemementation.
