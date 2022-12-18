@@ -1,5 +1,3 @@
-# IP addresses and subnets
-
 ## What is an IP address?
 
 An IP address is a unique identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, and printers. The two common protocols used for assigning IP addresses are IPv4 and IPv6.
@@ -68,7 +66,7 @@ Using the above examples, we can now determine the following:
 - The combination of IP and subnet mask can be represented as 192.168.0.1 /24
 - The subnet can have up to 254 devices because it is a class C type subnet
 
-## Additional considerations
+## Additional considerations 
 - Class D and class E subnets exist but they are not used for IP addresses and subnetting because they are often reserved for multicasting and experimentation on the network.
 - The 127.0.0.0-127.255.255.255 cannot be used for assigning IP addresses on a network because the range is reserved for local host traffic only.
 - The 0 or 255 numbers in the last octet cannot be assigned to devices because they are reserved for broadcasting, and experimentation.
