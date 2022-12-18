@@ -21,7 +21,7 @@ The output will display various networking properties for the computer, includin
 
 An IP address contains four sets of integers, each separated by a decimal. This sequence of numbers represents a 32 bit number in total, with each of the four sections containing 8 bits or octets. The integer representation of an IP address is easier to read, however when communicating over networks and the internet, addresses are communicated in binary using 1’s and 0’s. 
 
-Consider the 192.168.0.1 address that can be represented as both integers and binary:
+Consider the 192.168.0.1 address that can be represented as either integer or binary format:
 
 | Format          | Octet 1  | Octet 2  | Octet 3  | Octet 4  |
 | --------------- | -------- | -------- | -------- | -------- |
