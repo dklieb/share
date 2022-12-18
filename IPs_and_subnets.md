@@ -51,7 +51,7 @@ There are three ranges of IP addresses that are used for assigning internal addr
 
 **External addresses**
 
-External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned am external static IP address so that they remain the same to allow others to always find the server. Examples of these include websites, FTP servers, application servers, mail servers, and database servers. 
+External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address so that they remain the same to allow others to always find the server. Examples of these include websites, FTP servers, application servers, mail servers, and database servers. 
 
 Some devices including routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
 
