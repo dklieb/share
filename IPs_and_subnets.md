@@ -18,7 +18,7 @@ An IP address is a unique numerical identifier assigned to a device for connecti
 
 A device’s IP address can typically be found in the network settings, or from the command line in your computer's operating system.
 
-From the MacOS and Linux Terminal app, use the command:
+From the MacOS or Linux Terminal app, use the command:
 
 ```/sbin/ifconfig```
 
@@ -75,7 +75,7 @@ Server and other supported hosts can be assigned multiple external IP addresses.
 
 When a device is assigned and IP address, it is also assigned a subnet mask. A subnet mask identifies the range of allowable IP addresses on a network segment. This range is also referred to as a subnet.
 
-As with an IP address, a subnet mask that is assigned to a device can be found in the network settings, or from the command line in your computer operating system.
+As with an IP address, the subnet mask that is assigned to a device can be found in the network settings, or from the command line in your computer operating system.
 
 From the MacOS and Linux Terminal app, use the command:
 
