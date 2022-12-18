@@ -47,7 +47,7 @@ The following table shows how to identify the network ID and then host ID based 
 | ---------- | ---------- | ---------- | ------- |
 | 192        | 168        | 0          | 1       |
 
-The networking ID and hosting ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section [What is a subnet?](#what-is-a-subnet) below.
+The network ID and host ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section [What is a subnet?](#what-is-a-subnet) below.
 
 ## Internal IP addresses
 
