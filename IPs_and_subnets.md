@@ -69,7 +69,7 @@ Some devices including routers are configured with both internal and external IP
 
 Non-physical servers that share the same physical server such as web and FTP servers can use the same IP address. Each physical server must use a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
 
-Server and other supported hosts can be assigned multiple external IP addresses. For example, a company may have a security policy that allows them to host their web server and email server on the same physical server but they may be required to keep the web server and mail server on separate IPs adresses.
+Server and other supported hosts can be assigned multiple external IP addresses. For example, a company may have a security policy that allows them to host their web server and email server on the same physical server but they may be required to keep the web server and mail server on separate IPs addresses.
 
 ## What is a subnet?
 
