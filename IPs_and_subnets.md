@@ -1,5 +1,16 @@
 # Understanding IP addresses and subnets
 
+[What is an IP address?](#understanding-ip-addresses-and-subnets)
+
+[Internal IP addresses](#internal-ip-addresses)
+
+[External IP addresses](#external-ip-addresses)
+
+[What is a subnet mask?](#what-is-a-subnet-mask)
+
+[Putting is all together](#putting-it-all-together)
+
+[Limitations](#limitations)
 
 ## What is an IP address?
 
