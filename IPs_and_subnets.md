@@ -38,9 +38,7 @@ The following table shows how to identify the host ID and network ID based on th
 
 The networking ID and hosting ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section on subnets below.
 
-## Internal and external IP addresses
-
-**Internal addresses**
+## Internal IP addresses
 
 An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network, but they can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their devices, and eliminates the possibility of two devices using the same address. Any of these scenarios will prevent devices from connecting to the network.
 
@@ -52,7 +50,7 @@ There are three ranges of IP addresses that are used for assigning internal addr
 
 Supported devices such as personal computers can have multiple internal IP addresses for communicating across different or subnets on a network.
 
-**External addresses**
+## External IP addresses
 
 External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address, meaning the IP never changes. 
 
@@ -96,14 +94,17 @@ There are three main subnet class types. These classes allow a network administr
 | B     | 128-191           | 255.255.0.0   | /16           | 65,534          |
 | C     | 192-223           | 255.255.255.0 | /24           | 256             |
 
-Using all of the the information based on the IP address and subnet examples above, we can now determine the following:
 
-- The IP for the device is 192.168.0.1.
-- The subnet mask for the device is 255.255.255.0.
-- The combination of IP and subnet mask can be represented with the subnet prefix as 192.168.0.1 /24.
+## Putting it all together
+
+Using all of the information above, we can now determine the following:
+
+- The IP for the device is ```192.168.0.1```.
+- The subnet mask for the device is ```255.255.255.0```.
+- The combination of IP and subnet mask can be represented with the subnet prefix as ```192.168.0.1 /24```.
 - The subnet can assign up to 245 IP addresses because it is a class C type subnet.
 
-## Additional information
+## Limitations
 - The Class D and class E subnets exist but they are not used for IP addresses and subnetting because they are often reserved for multicasting and experimentation on the network.
 - The 127.0.0.0-127.255.255.255 range cannot be used for assigning IP addresses on a network because the range is reserved for local host traffic only.
 - The 0 or 255 numbers in the last octet of an IP address range cannot be assigned to devices because they are reserved for broadcasting, and experimentation.
