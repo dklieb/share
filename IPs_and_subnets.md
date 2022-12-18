@@ -14,7 +14,7 @@
 
 ## What is an IP address?
 
-An IP address is a unique numerical identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, IoT devices, and printers. For a device to use an IP address it must have a means of communicating, using either a hardwired Ethernet connection or a wireless connection.
+An IP address is a unique numerical identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, IoT devices, and printers. For a device to use an IP address it must have a means of communicating, using either an Ethernet connection or a wireless connection.
 
 A device’s IP address can typically be found in the network settings, or from the command line in your computer's operating system.
 
