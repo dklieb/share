@@ -99,7 +99,7 @@ There are three main subnet class types. These classes allow a network administr
 
 Using all of the information above, we can now determine the following:
 
-- The IP for the device is ```192.168.0.1```.
+- The IP addresse for the device is ```192.168.0.1```.
 - The subnet mask for the device is ```255.255.255.0```.
 - The combination of IP and subnet mask can be represented with the subnet prefix as ```192.168.0.1 /24```.
 - The subnet can assign up to 245 IP addresses because it is a class C type subnet.
