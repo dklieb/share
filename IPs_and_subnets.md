@@ -50,13 +50,17 @@ There are three ranges of IP addresses that are used for assigning internal addr
 - 172.0.0.0 - 172.255.255.255
 - 192.168.0.0 - 192.168.255.255
 
+Supported devices such as personal computers can have multiple internal IP addresses for communicating across different or subnets on a network.
+
 **External addresses**
 
-External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address so that they remain the same to allow others to always find the server. Examples of these include websites, FTP servers, application servers, mail servers, and database servers. 
+External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address, meaning the IP never changes. 
 
 Some devices including routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
 
-Non-physical servers such as web and FTP servers can have the same IP address, however each physical server must a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
+Non-physical servers that share the same physical server such as web and FTP servers can share the same IP address. Each physical server must use a unique IP address. As with internal addresses, multiple physical servers with the same IP address will result in connectivity issues.
+
+Server and other supported hosts can be assigned multiple external IP addresses. For example, a company may have a security policy that allows them to host their web server and email server on the same physical server but they may be required to keep the web server and mail server on separate IPs adresses.
 
 ## What is a subnet mask?
 
@@ -76,7 +80,7 @@ The output will display various networking properties for the computer, includin
 
 ```255.255.255.0```
 
-As with IP address, a subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
+As with an IP address, a subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
 
 
 | Format          | Octet  1 | Octet  2 | Octet  3 | Octet 4  |
@@ -84,7 +88,7 @@ As with IP address, a subnet mask contains four sets of integers, each separated
 | Integer version | 255      | 255      | 255      | 0        |
 | Binary version  | 11111111 | 11111111 | 11111111 | 00000000 |
 
-There are three main subnet class types. These classes allow a network administrator to define the size of a network segment by configuring a subnet mask and prefix. A prefix is s short form representation of the subnet mask.
+There are three main subnet class types. These classes allow a network administrator to define the size of a network segment by configuring a subnet mask and prefix. A subnet prefix is a short form representation of the subnet mask.
 
 | Class | First octet range | Subnet Mask   | Subnet prefix | Number of hosts |
 | ----- | ----------------- | ------------- | ------------- | --------------- |
@@ -94,13 +98,13 @@ There are three main subnet class types. These classes allow a network administr
 
 Using all of the the information based on the IP address and subnet examples above, we can now determine the following:
 
-- The IP for the device is 192.168.0.1
-- The subnet mask for the device is 255.255.255.0
-- The combination of IP and subnet mask can be represented with the subnet prefix as 192.168.0.1 /24
-- The subnet can assign up to 245 IP addresses because it is a class C type subnet
+- The IP for the device is 192.168.0.1.
+- The subnet mask for the device is 255.255.255.0.
+- The combination of IP and subnet mask can be represented with the subnet prefix as 192.168.0.1 /24.
+- The subnet can assign up to 245 IP addresses because it is a class C type subnet.
 
 ## Additional information
 - The Class D and class E subnets exist but they are not used for IP addresses and subnetting because they are often reserved for multicasting and experimentation on the network.
 - The 127.0.0.0-127.255.255.255 range cannot be used for assigning IP addresses on a network because the range is reserved for local host traffic only.
 - The 0 or 255 numbers in the last octet of an IP address range cannot be assigned to devices because they are reserved for broadcasting, and experimentation.
-- Multiple internal or external IP addresses can be assigned to a device, if that device supports such an implemementation.
+
