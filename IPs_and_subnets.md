@@ -78,7 +78,7 @@ The output will display various networking properties for the computer, includin
 As with IP address, a subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
 
 
-| Format          | Octet    | Octet    | Octet    | Octet    |
+| Format          | Octet  1 | Octet  2 | Octet  3 | Octet 4  |
 | --------------- | -------- | -------- | -------- | -------- |
 | Integer version | 255      | 255      | 255      | 0        |
 | Binary version  | 11111111 | 11111111 | 11111111 | 00000000 |
