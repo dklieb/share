@@ -62,7 +62,7 @@ Server and other supported hosts can be assigned multiple external IP addresses.
 
 ## What is a subnet mask?
 
-When a device is assigned and IP address, it is also assigned a subnet mask. A subnets mask identifies the range of allowable IP addresses on a network segment, and is assigned to devices using internal or external IP addresses.
+When a device is assigned and IP address, it is also assigned a subnet mask. A subnets mask identifies the range of allowable IP addresses on a network segment, and is applicable to both internal or external IP addresses.
 
 As with an IP address, a subnet mask that is assigned to a device can typically be found in the network settings, or from the command line in your computer operating system.
 
@@ -78,7 +78,7 @@ The output will display various networking properties for the computer, includin
 
 ```255.255.255.0```
 
-As with an IP address, a subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
+A subnet mask contains four sets of integers, each separated by a decimal This sequence of numbers also represents a 32 bit number in total, with each of the four sections containing 8 bits or octets.
 
 
 | Format          | Octet  1 | Octet  2 | Octet  3 | Octet 4  |
