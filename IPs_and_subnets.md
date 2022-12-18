@@ -30,18 +30,19 @@ Consider the 192.168.0.1 address that can be represented as either integer or bi
 
 In addition to the IP address being a unique identifier for the device, it also contains information about the network ID and the host ID. A network ID is the subnet that the device belongs to, and the host ID is an identifier for the device itself. 
 
-The following table shows how identify the host ID and network ID:
+The following table shows how to identify the host ID and network ID based on the 192.168.0.1 address example:
+
 | Network ID | Network ID | Network ID | Host ID |
 | ---------- | ---------- | ---------- | ------- |
 | 192        | 168        | 0          | 1       |
 
-The networking ID and hosting ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section on subnets.
+The networking ID and hosting ID information for an IP address will vary based on the subnet mask that is assigned to the device. For more information about subnets, see the section on subnets below.
 
 ## Internal and external IP addresses
 
 **Internal addresses**
 
-An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network, but they can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their device, and eliminates the possibility of two devices from using the same address. Any of these scenarios will prevent devices from connecting to the network.
+An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network, but they can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their devices, and eliminates the possibility of two devices using the same address. Any of these scenarios will prevent devices from connecting to the network.
 
 There are three ranges of IP addresses that are used for assigning internal addresses:
 
