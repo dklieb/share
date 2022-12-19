@@ -1,6 +1,6 @@
 # IP addresses and subnets
 
-[What is an IP address?](#understanding-ip-addresses-and-subnets)
+[What is an IP address?](#what-is-an-ip-address)
 
 [Internal IP addresses](#internal-ip-addresses)
 
