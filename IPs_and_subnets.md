@@ -14,7 +14,7 @@
 
 ## What is an IP address?
 
-An IP address is a unique numerical identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, IoT devices, and printers. For a device to use an IP address it must have a means of communicating, using either an Ethernet connection or a wireless connection.
+An IP address is a unique numerical identifier assigned to a device for connecting to an internal network or over the internet. This address lets other devices know how to find it, similar to how a telephone number works. Examples of devices include servers, routers, personal computers, tablets, IoT devices, and printers. For a device to obtain an IP address it must have Ethernet or wireless networking capabilities.
 
 A device’s IP address can typically be found in the network settings, or from the command line in your computer's operating system.
 
@@ -41,7 +41,7 @@ Consider the 192.168.0.1 address that can be represented in either the integer o
 
 In addition to the IP address being a unique identifier for the device, it also contains information about the network ID and the host ID. A network ID is the subnet that the device belongs to, and the host ID is an identifier for the device itself. 
 
-The following table shows how to identify the network ID and then host ID based on the 192.168.0.1 address example:
+The following table shows how to identify the network ID and the host ID based on the 192.168.0.1 address example:
 
 | Network ID | Network ID | Network ID | Host ID |
 | ---------- | ---------- | ---------- | ------- |
@@ -51,7 +51,7 @@ The network ID and host ID information for an IP address will vary based on the 
 
 ## Internal IP addresses
 
-An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically by a dynamic host control protocol (DHCP) server on the network, but they can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their devices, and eliminates the possibility of two devices using the same address. Any of these scenarios will prevent devices from connecting to the network.
+An internal IP is a private address assigned to a device inside of a local area network (LAN). Addresses are usually assigned automatically using a dynamic host control protocol (DHCP) server on the network, but an address can also be configured manually. Using a DHCP server is typically the preferred method because it is easier to set up, prevents users from configuring an incorrect address on their devices, and eliminates the possibility of two devices using the same address. Any of these scenarios will prevent devices from properly connecting to the network.
 
 There are three ranges of IP addresses that are used for assigning internal addresses:
 
@@ -59,15 +59,15 @@ There are three ranges of IP addresses that are used for assigning internal addr
 - 172.0.0.0 - 172.255.255.255
 - 192.168.0.0 - 192.168.255.255
 
-Devices such as personal computers can have multiple internal IP addresses for communicating across different subnets on a network.
+Devices such as personal computers can have multiple internal IP addresses for communicating across different subnets on a network, provided that they have multiple 
 
 ## External IP addresses
 
-External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address, meaning the address never changes. IP addresses for home internet connections are usually assigned by the ISP's DHCP server, and can change.
+External IP addresses are assigned to devices connected directly to the internet. Typically, devices such as corporate servers are assigned an external static IP address, meaning the address never changes. IP addresses for home internet connections are usually assigned by the ISP's DHCP server, and can change without any notice.
 
-Servers and other supported devices can be assigned multiple external IP addresses. For example, a company may have a security policy that allows it to host a web server and an email server on the same physical server but they must maintain these services on separate IPs addresses.
+Servers and other supported devices can be assigned multiple external IP addresses. For example, a company may have a security policy that allows it to host a web server and an email server on the same physical server but they must maintain these services on separate IP addresses.
 
-Some devices including routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
+Devices such as routers are configured with both internal and external IP addresses. This allows for communication with both the internal LAN and the internet simultaneously, while acting as a gateway for LAN devices to communicate with the internet.
 
 
 ## What is a subnet?
